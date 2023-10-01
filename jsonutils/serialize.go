@@ -1,4 +1,4 @@
-package jsonhelpers
+package jsonutils
 
 import (
 	"encoding/json"
