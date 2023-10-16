@@ -1,4 +1,4 @@
-module github.com/Ruthvik10/commonLib
+module github.com/Ruthvik10/commongolib
 
 go 1.21.0
 

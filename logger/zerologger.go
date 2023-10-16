@@ -1,16 +1,17 @@
 package logger
 
 import (
+	"io"
+
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/pkgerrors"
-	"io"
 )
 
 type ZeroLogger struct {
 	zerolog *zerolog.Logger
 }
 
-func New(out io.WriteCloser) *ZeroLogger {
+func NewZeroLogger(out io.WriteCloser) *ZeroLogger {
 	zerolog.TimeFieldFormat = zerolog.TimestampFunc().String()
 	zerolog.ErrorStackMarshaler = pkgerrors.MarshalStack
 
